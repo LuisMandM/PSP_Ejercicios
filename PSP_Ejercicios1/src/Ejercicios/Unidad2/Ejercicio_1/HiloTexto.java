@@ -1,4 +1,4 @@
-package Ejercicios.Unidad2;
+package Ejercicios.Unidad2.Ejercicio_1;
 
 public class HiloTexto extends Thread {
     public HiloTexto(String texto) {
