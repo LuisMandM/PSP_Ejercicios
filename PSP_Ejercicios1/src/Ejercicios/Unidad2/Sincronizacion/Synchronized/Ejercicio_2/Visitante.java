@@ -17,7 +17,11 @@ public class Visitante extends Thread {
     @Override
     public void run() {
         if (accion.equals("+")) {
-            candadoJardin.entrada();
+            try {
+                candadoJardin.entrada();
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
         } else if (accion.equals("-")) {
             candadoJardin.salida();
         }
