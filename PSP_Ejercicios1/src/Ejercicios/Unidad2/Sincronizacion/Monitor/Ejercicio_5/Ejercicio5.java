@@ -5,7 +5,7 @@ public class Ejercicio5 {
         PistaPadel pistaPadel= new PistaPadel();
         Jugador jugador;
 
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 15; i++) {
             jugador = new Jugador(pistaPadel);
             jugador.start();
         }
