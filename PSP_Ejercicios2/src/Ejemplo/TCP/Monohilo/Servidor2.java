@@ -1,4 +1,4 @@
-package Ejemplo.Monohilo;
+package Ejemplo.TCP.Monohilo;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;

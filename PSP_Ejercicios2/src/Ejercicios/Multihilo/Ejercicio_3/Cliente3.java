@@ -22,10 +22,11 @@ public class Cliente3 {
             if (operacion != 5) {
                 System.out.println("Introduce el primer numero: ");
                 num1 = Double.parseDouble(bufer.readLine());
-                salida.writeDouble(num1);
 
                 System.out.println("Introduce el segundo numero: ");
                 num2 = Double.parseDouble(bufer.readLine());
+
+                salida.writeDouble(num1);
                 salida.writeDouble(num2);
 
                 System.out.println(entrada.readDouble());

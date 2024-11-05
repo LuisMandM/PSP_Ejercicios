@@ -1,4 +1,4 @@
-package Ejemplo.Monohilo;
+package Ejemplo.TCP.Monohilo;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -8,7 +8,7 @@ import java.net.Socket;
 
 public class Servidor {
     public static void main(String[] args) throws IOException {
-        System.out.println("Ejemplo.Monohilo.Servidor preparado");
+        System.out.println("Ejemplo.TCP.Monohilo.Servidor preparado");
         ServerSocket servidor = new ServerSocket(5000);
         Socket peticion = servidor.accept(); // ".accept" devuelve un socket. Es decir, estamos creando la conexion y ya podemos leer y escribir
 

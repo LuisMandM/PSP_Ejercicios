@@ -1,4 +1,4 @@
-package Ejemplo.Multihilo;
+package Ejemplo.TCP.Multihilo;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;

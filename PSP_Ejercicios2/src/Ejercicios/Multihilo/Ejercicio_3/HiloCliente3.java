@@ -17,35 +17,39 @@ public class HiloCliente3 extends Thread {
         try {
             DataInputStream entrada = new DataInputStream(socket.getInputStream());
             DataOutputStream salida = new DataOutputStream(socket.getOutputStream());
+            int operacion = 0;
 
             double solucion = 0.0;
-            switch (entrada.readInt()) {
-                case 1: // suma
-                    solucion = entrada.readDouble() + entrada.readDouble();
-                    salida.writeDouble(solucion);
-                    break;
-                case 2: // resta
-                    solucion = entrada.readDouble() - entrada.readDouble();
-                    salida.writeDouble(solucion);
-                    break;
-                case 3: // multiplicacion
-                    solucion = entrada.readDouble() * entrada.readDouble();
-                    salida.writeDouble(solucion);
-                    break;
-                case 4: // division
-                    solucion = entrada.readDouble() / entrada.readDouble();
-                    salida.writeDouble(solucion);
-                    break;
-                case 5:
-                    entrada.close();
-                    salida.close();
-                    socket.close();
-                    break;
-                default:
-                    break;
-
+            while (operacion != 5) {
+                switch (entrada.readInt()) {
+                    case 1: // suma
+                        solucion = entrada.readDouble() + entrada.readDouble();
+                        salida.writeDouble(solucion);
+                        break;
+                    case 2: // resta
+                        solucion = entrada.readDouble() - entrada.readDouble();
+                        salida.writeDouble(solucion);
+                        break;
+                    case 3: // multiplicacion
+                        solucion = entrada.readDouble() * entrada.readDouble();
+                        salida.writeDouble(solucion);
+                        break;
+                    case 4: // division
+                        solucion = entrada.readDouble() / entrada.readDouble();
+                        salida.writeDouble(solucion);
+                        break;
+                    case 5:
+                        operacion = 5;
+                        break;
+                    default:
+                        break;
+                }
             }
-        } catch (IOException e) {
+            entrada.close();
+            salida.close();
+            socket.close();
+        } catch (
+                IOException e) {
             throw new RuntimeException(e);
         }
     }
